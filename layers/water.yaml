@@ -161,6 +161,9 @@ styles:
                 STRIPES_ALPHA: 1.
                 STRIPES_SCALE: 25.
                 STRIPES_WIDTH: zoom()
+            blocks:
+                # Use alpha from pattern to scale rgb values
+                color: color = vec4(color.rgb * color.a, 1.);
 
     water-later:
         base: polygons

@@ -41,6 +41,9 @@ styles:
                 STRIPES_ALPHA: 1.
                 STRIPES_SCALE: mix(25.,50.,smoothstep(0.,1.,1.-zoom()))
                 STRIPES_WIDTH: 1.-zoom()-.2
+            blocks:
+                # Use alpha from pattern to scale rgb values
+                color: color = vec4(color.rgb * color.a, 1.);
 
     urban-early:
         base: polygons
